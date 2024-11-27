@@ -94,7 +94,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   void resetPins()
   {
-    // two digits
+    // tens digit
     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_10, GPIO_PIN_RESET);
@@ -113,6 +113,7 @@ int main(void)
   }
   void displayNumbers(int num)
   {
+
     resetPins();
     int onesDigit = num % 10;
     int twosDigit = num / 10;
